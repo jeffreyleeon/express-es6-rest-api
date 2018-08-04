@@ -27,6 +27,7 @@ jobs:
           - v1-dependencies-
 
       - run: yarn install
+      - run: echo "hello world"
 
       - save_cache:
           paths:
