@@ -28,6 +28,11 @@ jobs:
 
       - run: yarn install
       - run: echo "hello world"
+      - run: ls ~
+      - run: aws s3 cp s3://testing-bucket-jeffrey/testing.yml ~/
+      - run: echo "after s3 cp"
+      - run: ls ~
+      - run: cat ~/testing.yml
 
       - save_cache:
           paths:
